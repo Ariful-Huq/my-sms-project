@@ -1,0 +1,17 @@
+# MY-SMS-PROJECT/backend/.gitignore
+# Python / Django
+venv/
+*.py[cod]
+__pycache__/
+.env
+db.sqlite3
+media/
+staticfiles/
+
+# System Files
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/

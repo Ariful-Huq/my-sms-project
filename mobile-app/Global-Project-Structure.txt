@@ -1,0 +1,18 @@
+/my-sms-project
+├── backend/                # Django REST Framework (Port 8000)
+│   ├── core/               # Settings & WSGI
+│   ├── api/                # App logic (Models, Serializers, Views)
+│   ├── .env                # DATABASE_URL, SECRET_KEY, ALLOWED_HOSTS
+│   └── manage.py
+├── frontend-web/           # React + Vite (Port 5173)
+│   ├── src/
+│   │   ├── api/            # <--- API Centralization
+│   │   │   └── axiosInstance.js
+│   │   └── components/
+│   └── .env                # VITE_API_URL=http://localhost:8000
+└── mobile-app/             # React Native + Expo
+    ├── src/
+    │   ├── api/            # <--- API Centralization
+    │   │   └── axiosInstance.js
+    │   └── screens/
+    └── .env                # EXPO_PUBLIC_API_URL=http://192.168.x.x:8000

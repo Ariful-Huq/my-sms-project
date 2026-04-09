@@ -1,0 +1,9 @@
+# Root .gitignore
+**/node_modules/
+**/venv/
+**/.env
+**/.expo/
+**/db.sqlite3
+**/__pycache__/
+**/*.pyc
+.DS_Store
