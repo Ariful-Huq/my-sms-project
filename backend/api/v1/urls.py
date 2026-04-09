@@ -12,4 +12,5 @@ urlpatterns = [
     path('users/', include('users.urls')),
     # When you create the school app, you'll just add:
     # path('school/', include('school.urls')),
+    path('academics/', include('academics.urls')),
 ]

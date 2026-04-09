@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     # Internal Apps
     'api',
     'users',
+    'academics',
 ]
 
 MIDDLEWARE = [
