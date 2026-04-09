@@ -17,7 +17,7 @@ export default function LoginScreen() {
 
     setLoading(true);
     try {
-      const response = await api.post('/api/token/', { username, password });
+      const response = await api.post('/token/', { username, password });
       Alert.alert("Success", "Logged in to School ERP!");
       // Handle navigation or global state update here
     } catch (error) {

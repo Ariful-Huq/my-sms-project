@@ -17,14 +17,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from rest_framework_simplejwt.views import TokenRefreshView
-from users.serializers import MyTokenObtainPairView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    # JWT Endpoints
-    path('api/token/', MyTokenObtainPairView.as_view(), name='token_obtain_pair'),
-    path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
-    # App Endpoints
-    path('api/users/', include('users.urls')),
+
+    # API Versioning Manager
+    path('api/v1/', include('api.v1.urls')),
+
+    # In the future, you could easily add:
+    # path('api/v2/', include('api.v2.urls')),
 ]

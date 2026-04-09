@@ -13,7 +13,7 @@ const Login = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await api.post('/api/token/', credentials);
+            const response = await api.post('/token/', credentials);
             // Architect's Tip: Store tokens securely
             localStorage.setItem('access_token', response.data.access);
             localStorage.setItem('refresh_token', response.data.refresh);

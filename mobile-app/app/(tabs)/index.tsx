@@ -9,7 +9,7 @@ export default function App() {
 
   const handleLogin = async () => {
     try {
-      const response = await api.post('/api/token/', { username, password });
+      const response = await api.post('/token/', { username, password });
       
       // Save tokens securely
       await SecureStore.setItemAsync('access_token', response.data.access);
